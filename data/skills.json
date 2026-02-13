@@ -65,6 +65,17 @@
         "Fusion360",
         "PSpice Simulation"
       ]
+    },
+        {
+      "id": 6,
+      "category": "PCB & Design",
+      "icon": "🎨",
+      "items": [
+        "EasyEDA",
+        "Cadence Design",
+        "Fusion360",
+        "PSpice Simulation"
+      ]
     }
   ]
 }
