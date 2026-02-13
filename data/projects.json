@@ -1,0 +1,43 @@
+{
+  "projects": [
+    {
+      "id": 1,
+      "title": "Gesture-Controlled Robot",
+      "date": "March 2025",
+      "description": "Computer vision-based robot control via Wi-Fi",
+      "technologies": [
+        "Embedded C firmware on ESP32",
+        "Wi-Fi TCP/IP command reception",
+        "GPIO-based motor control logic",
+        "Hardware-software integration"
+      ],
+      "github": "https://github.com/SUDEEPMULLAGURI/Gesture-Controlled-Robot"
+    },
+    {
+      "id": 2,
+      "title": "NanoDrive 0.1",
+      "date": "October 2024",
+      "description": "Custom ESP Pico D4 development board",
+      "technologies": [
+        "Custom PCB design & fabrication",
+        "Optimized schematics & layout",
+        "Peripheral validation testing",
+        "Board bring-up & debugging"
+      ],
+      "github": "https://github.com/SUDEEPMULLAGURI/NanoDrive"
+    },
+    {
+      "id": 3,
+      "title": "Smart Irrigation System",
+      "date": "December 2024",
+      "description": "AI-enabled automated watering system",
+      "technologies": [
+        "Sensor integration & data acquisition",
+        "Real-time control firmware",
+        "Data processing & optimization",
+        "System reliability & debugging"
+      ],
+      "github": "https://github.com/SUDEEPMULLAGURI/Smart-Irrigation"
+    }
+  ]
+}

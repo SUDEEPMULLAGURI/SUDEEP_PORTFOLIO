@@ -1,0 +1,70 @@
+{
+  "skills": [
+    {
+      "id": 1,
+      "category": "Languages",
+      "icon": "🔧",
+      "items": [
+        "Embedded C",
+        "C++",
+        "Python",
+        "Assembly"
+      ]
+    },
+    {
+      "id": 2,
+      "category": "Microcontrollers",
+      "icon": "🎛️",
+      "items": [
+        "ESP32 / ESP8266",
+        "8051 Family",
+        "Arduino-compatible MCUs",
+        "ARM Cortex-M"
+      ]
+    },
+    {
+      "id": 3,
+      "category": "Embedded Systems",
+      "icon": "📡",
+      "items": [
+        "RTOS Fundamentals",
+        "GPIO & Peripheral Control",
+        "Timers & Interrupts",
+        "PWM & Signal Processing"
+      ]
+    },
+    {
+      "id": 4,
+      "category": "Networking",
+      "icon": "🌐",
+      "items": [
+        "TCP/IP Protocols",
+        "Wi-Fi Communication",
+        "MQTT & IoT Protocols",
+        "Network Debugging"
+      ]
+    },
+    {
+      "id": 5,
+      "category": "Tools & IDEs",
+      "icon": "🛠️",
+      "items": [
+        "Keil µVision",
+        "Arduino IDE",
+        "Proteus & Wokwi",
+        "Git/GitHub"
+      ]
+    },
+    {
+      "id": 6,
+      "category": "PCB & Design",
+      "icon": "🎨",
+      "items": [
+        "EasyEDA",
+        "Cadence Design",
+        "Fusion360",
+        "PSpice Simulation"
+      ]
+    }
+  ]
+}
