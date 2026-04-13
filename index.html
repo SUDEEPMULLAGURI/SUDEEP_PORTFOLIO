@@ -430,6 +430,102 @@
             .timeline-item::after { left: 23px; }
             .left { text-align: left; }
         }
+
+        /* ACHIEVEMENTS */
+        .achievements-gallery {
+            display: flex;
+            overflow-x: auto;
+            gap: 2rem;
+            padding: 2rem 0;
+            scroll-snap-type: x mandatory;
+            scrollbar-width: thin;
+            scrollbar-color: var(--primary-blue) transparent;
+            -webkit-overflow-scrolling: touch;
+        }
+
+        .achievements-gallery::-webkit-scrollbar {
+            height: 6px;
+        }
+        .achievements-gallery::-webkit-scrollbar-thumb {
+            background: var(--primary-blue);
+            border-radius: 10px;
+        }
+        .achievements-gallery::-webkit-scrollbar-track {
+            background: rgba(0, 102, 255, 0.05);
+        }
+
+        .achievement-card {
+            min-width: 450px;
+            scroll-snap-align: center;
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid rgba(0, 102, 255, 0.1);
+            transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            position: relative;
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            border-color: var(--primary-blue);
+            box-shadow: 0 20px 40px rgba(0, 102, 255, 0.15);
+        }
+
+        .achievement-img {
+            width: 100%;
+            height: 280px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .achievement-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: 0.5s;
+        }
+
+        .achievement-card:hover .achievement-img img {
+            transform: scale(1.1);
+        }
+
+        .achievement-overlay {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--primary-blue);
+            color: var(--white);
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-family: var(--font-code);
+            font-weight: 800;
+            font-size: 0.9rem;
+            box-shadow: 0 5px 15px rgba(0, 102, 255, 0.4);
+            z-index: 2;
+        }
+
+        .achievement-content {
+            padding: 2rem;
+            background: linear-gradient(to bottom, var(--white), var(--bg-grid));
+        }
+
+        .achievement-content h3 {
+            font-size: 1.4rem;
+            color: var(--dark-blue);
+            margin-bottom: 0.8rem;
+        }
+
+        .achievement-content p {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        @media (max-width: 768px) {
+            .achievement-card { min-width: 300px; }
+            .achievement-img { height: 200px; }
+        }
     </style>
 </head>
 <body>
@@ -458,6 +554,7 @@
                 <a href="#home" class="nav-item">Home</a>
                 <a href="#skills" class="nav-item">Skills</a>
                 <a href="#projects" class="nav-item">Projects</a>
+                <a href="#achievements" class="nav-item">Achievements</a>
                 <a href="#certifications" class="nav-item">Certifications</a>
                 <a href="#experience" class="nav-item">Experience</a>
             </div>
@@ -575,7 +672,7 @@
                         <span class="tech-pill">ESP32</span><span class="tech-pill">Wi-Fi</span>
                         <span class="tech-pill">MediaPipe</span>
                     </div>
-                    <a href="https://github.com/SUDEEPMULLAGURI" target="_blank" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
+                    <a href="https://github.com/SUDEEPMULLAGURI/Gesture-control-car.git" target="_blank" class="project-link">View Code <i class="fas fa-arrow-right"></i></a>
                 </div>
             </div>
 
@@ -624,6 +721,40 @@
                         <span class="tech-pill">Automation</span><span class="tech-pill">IoT</span>
                     </div>
                     <a href="https://github.com/SUDEEPMULLAGURI" target="_blank" class="project-link">View Case Study <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ACHIEVEMENTS -->
+    <section id="achievements">
+        <div class="section-header fade-in">
+            <h2>Milestones & <span>Achievements</span></h2>
+            <p>Recognition for innovation and competitive performance in technology.</p>
+        </div>
+
+        <div class="achievements-gallery fade-in">
+            <!-- Achievement 1 -->
+            <div class="achievement-card">
+                <div class="achievement-overlay"><i class="fas fa-trophy"></i> 1ST PLACE</div>
+                <div class="achievement-img">
+                    <img src="assets/achievement_1.png" alt="Hackathon First Place">
+                </div>
+                <div class="achievement-content">
+                    <h3>Hackathon Winner</h3>
+                    <p>Secured the first position at a major technology hackathon for developing an innovative IoT solution for predictive irrigation management. Recognized for technical excellence and impact.</p>
+                </div>
+            </div>
+
+            <!-- Achievement 2 -->
+            <div class="achievement-card">
+                <div class="achievement-overlay" style="background: #94a3b8;"><i class="fas fa-award"></i> 2ND PLACE</div>
+                <div class="achievement-img">
+                    <img src="assets/achievement_2.png" alt="Hackathon Second Place">
+                </div>
+                <div class="achievement-content">
+                    <h3>Runner Up</h3>
+                    <p>Achieved second place in a competitive national-level hackathon focused on embedded systems. Developed a custom PCB-based robotics platform from scratch within 48 hours.</p>
                 </div>
             </div>
         </div>
