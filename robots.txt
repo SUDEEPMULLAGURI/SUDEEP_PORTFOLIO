@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sudeepmullaguri.github.io/SUDEEP_PORTFOLIO/sitemap.xml
