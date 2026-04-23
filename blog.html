@@ -1367,7 +1367,7 @@
             <h2>Circuit <span>Log</span></h2>
             <p>Thoughts, tutorials, and project chronicles in the embedded world.</p>
         </div>
-        
+
         <div class="projects-grid" id="blog-grid" style="margin-top: 2rem;">
             <!-- Blog posts will be loaded here via JavaScript -->
             <div style="text-align: center; grid-column: 1 / -1; color: var(--text-secondary);">
@@ -1389,24 +1389,24 @@
         // Fetch and display blog posts
         document.addEventListener('DOMContentLoaded', async () => {
             const blogGrid = document.getElementById('blog-grid');
-            
+
             try {
                 // To avoid caching issues during development
                 const res = await fetch('data/blogs.json?v=' + new Date().getTime());
                 if (!res.ok) throw new Error('Failed to load blogs.json');
                 const posts = await res.json();
-                
+
                 if (posts.length === 0) {
                     blogGrid.innerHTML = '<div style="grid-column: 1 / -1; text-align: center; color: var(--text-secondary);"><p>No posts published yet. Stay tuned!</p></div>';
                     return;
                 }
-                
+
                 blogGrid.innerHTML = ''; // Clear loading
-                
-                posts.sort((a,b) => new Date(b.date) - new Date(a.date)).forEach(post => {
+
+                posts.sort((a, b) => new Date(b.date) - new Date(a.date)).forEach(post => {
                     const dateObj = new Date(post.date);
                     const dateStr = dateObj.toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric' });
-                    
+
                     const card = document.createElement('div');
                     card.className = 'project-card fade-in visible';
                     // We reuse project-card styles from index.html
@@ -1430,4 +1430,5 @@
         });
     </script>
 </body>
+
 </html>

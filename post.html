@@ -1372,35 +1372,44 @@
             box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
             border: 1px solid #E2E8F0;
         }
+
         .post-header {
             margin-bottom: 2rem;
             border-bottom: 1px solid #E2E8F0;
             padding-bottom: 1.5rem;
         }
+
         .post-title {
             font-size: 2.5rem;
             color: var(--dark-blue);
             margin-bottom: 0.5rem;
             line-height: 1.2;
         }
+
         .post-date {
             font-family: var(--font-code);
             color: var(--text-secondary);
             font-size: 0.95rem;
         }
+
         .post-content {
             font-size: 1.1rem;
             line-height: 1.8;
             color: var(--text-main);
         }
-        .post-content h1, .post-content h2, .post-content h3 {
+
+        .post-content h1,
+        .post-content h2,
+        .post-content h3 {
             color: var(--dark-blue);
             margin-top: 2rem;
             margin-bottom: 1rem;
         }
+
         .post-content p {
             margin-bottom: 1.5rem;
         }
+
         .post-content pre {
             background: #1a202c;
             color: #f7fafc;
@@ -1411,6 +1420,7 @@
             font-size: 0.9rem;
             margin-bottom: 1.5rem;
         }
+
         .post-content code {
             font-family: var(--font-code);
             background: #E2E8F0;
@@ -1418,10 +1428,12 @@
             border-radius: 4px;
             font-size: 0.9em;
         }
+
         .post-content pre code {
             background: transparent;
             padding: 0;
         }
+
         .post-content blockquote {
             border-left: 4px solid var(--primary-blue);
             padding-left: 1rem;
@@ -1429,11 +1441,13 @@
             font-style: italic;
             margin-bottom: 1.5rem;
         }
+
         .post-content img {
             max-width: 100%;
             border-radius: 8px;
             margin-bottom: 1.5rem;
         }
+
         .back-link {
             display: inline-block;
             margin-bottom: 1rem;
@@ -1442,6 +1456,7 @@
             text-decoration: none;
             font-family: var(--font-code);
         }
+
         .back-link:hover {
             color: var(--dark-blue);
             text-decoration: underline;
@@ -1454,7 +1469,7 @@
         <div id="loading" style="text-align: center; color: var(--primary-blue); padding: 3rem 0;">
             <i class="fas fa-circle-notch fa-spin fa-3x"></i>
         </div>
-        
+
         <div id="post-body" style="display: none;">
             <div class="post-header">
                 <h1 class="post-title" id="p-title"></h1>
@@ -1478,7 +1493,7 @@
             const loading = document.getElementById('loading');
             const postBody = document.getElementById('post-body');
             const postError = document.getElementById('post-error');
-            
+
             if (!postId) {
                 loading.style.display = 'none';
                 postError.textContent = 'Post ID not provided in URL.';
@@ -1501,7 +1516,7 @@
                             dateStr = d.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
                         }
                     }
-                } catch(e) { console.warn('Could not fetch metadata', e); }
+                } catch (e) { console.warn('Could not fetch metadata', e); }
 
                 document.getElementById('p-title').textContent = title;
                 document.getElementById('p-date').textContent = dateStr;
@@ -1513,13 +1528,13 @@
                     throw new Error('Markdown file not found. Please ensure it was published correctly.');
                 }
                 const mdContent = await resMd.text();
-                
+
                 // Parse and purify
                 const rawHtml = marked.parse(mdContent);
                 const safeHtml = DOMPurify.sanitize(rawHtml);
-                
+
                 document.getElementById('p-content').innerHTML = safeHtml;
-                
+
                 loading.style.display = 'none';
                 postBody.style.display = 'block';
 
@@ -1531,4 +1546,5 @@
         });
     </script>
 </body>
+
 </html>
