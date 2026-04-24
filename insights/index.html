@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insights on Smart Farming & Technology | Sudeep Mullaguri</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description"
+        content="Learn about low-cost smart irrigation, IoT agricultural systems, and real-world farming technology insights from Sudeep Mullaguri. Engineers perspective on smart farming.">
+    <meta name="keywords"
+        content="Smart Farming, IoT Agriculture, Smart Irrigation, Low-Cost Automation, Agricultural Engineering, Sudeep Mullaguri">
+    <meta name="author" content="Sudeep Mullaguri">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Insights on Smart Farming & Technology | Sudeep Mullaguri">
+    <meta property="og:description" content="I design low-cost, intelligent farming systems. These are my learnings from solving real-world agricultural problems using technology.">
+    <meta property="og:type" content="website">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="../assets/favicon.png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --primary: #0066FF;
+            --dark: #003399;
+            --light: #E6F0FF;
+            --white: #FFFFFF;
+            --text: #1A202C;
+            --text-muted: #4A5568;
+            --shadow: 0 10px 30px rgba(0, 102, 255, 0.05);
+            --transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); background: #F8FAFC; line-height: 1.6; }
+
+        /* Performance Optimized Header */
+        header {
+            background: var(--white);
+            padding: 100px 5% 60px;
+            text-align: center;
+            border-bottom: 1px solid var(--light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: radial-gradient(circle at top right, rgba(0, 102, 255, 0.03), transparent);
+            z-index: 0;
+        }
+
+        .container { max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
+
+        h1 { font-size: 3rem; font-weight: 800; margin-bottom: 1rem; color: var(--text); letter-spacing: -1px; }
+        h1 span { color: var(--primary); }
+        .subtitle { font-size: 1.25rem; color: var(--text-muted); max-width: 700px; margin: 0 auto 2rem; }
+
+        /* Categories */
+        .categories {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin-bottom: 4rem;
+        }
+
+        .category-pill {
+            padding: 0.6rem 1.5rem;
+            background: var(--white);
+            border: 1px solid var(--light);
+            border-radius: 50px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: var(--transition);
+        }
+
+        .category-pill:hover {
+            border-color: var(--primary);
+            color: var(--primary);
+            box-shadow: var(--shadow);
+            transform: translateY(-2px);
+        }
+
+        /* Grid Layout */
+        .insights-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2.5rem;
+            padding: 0 5% 100px;
+        }
+
+        .insight-card {
+            background: var(--white);
+            border-radius: 20px;
+            overflow: hidden;
+            border: 1px solid var(--light);
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .insight-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 102, 255, 0.1);
+            border-color: var(--primary);
+        }
+
+        .card-image {
+            width: 100%;
+            height: 200px;
+            background: var(--light);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: var(--transition);
+        }
+
+        .insight-card:hover .card-image img { transform: scale(1.05); }
+
+        .card-content { padding: 2rem; flex-grow: 1; display: flex; flex-direction: column; }
+        .card-tag { font-family: 'JetBrains Mono', monospace; font-size: 0.75rem; color: var(--primary); font-weight: 700; text-transform: uppercase; margin-bottom: 1rem; display: block; }
+        .card-title { font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem; color: var(--text); line-height: 1.3; }
+        .card-desc { font-size: 0.95rem; color: var(--text-muted); margin-bottom: 2rem; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+        .read-more {
+            margin-top: auto;
+            color: var(--primary);
+            text-decoration: none;
+            font-weight: 700;
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-size: 0.9rem;
+            transition: var(--transition);
+        }
+
+        .read-more:hover { gap: 12px; }
+
+        /* Navigation Replacement */
+        .nav-back {
+            position: absolute;
+            top: 40px;
+            left: 5%;
+            text-decoration: none;
+            color: var(--text-muted);
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: var(--transition);
+        }
+
+        .nav-back:hover { color: var(--primary); }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 2.2rem; }
+            .insights-grid { grid-template-columns: 1fr; }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container">
+            <a href="../index.html" class="nav-back"><i class="fas fa-arrow-left"></i> Home Portfolio</a>
+            <h1><span>Insights</span> on Smart Farming & Tech</h1>
+            <p class="subtitle">I design low-cost, intelligent farming systems. These are my learnings from solving real-world agricultural problems using technology.</p>
+            
+            <div class="categories">
+                <a href="#irrigation" class="category-pill">Smart Irrigation</a>
+                <a href="#iot" class="category-pill">IoT in Agriculture</a>
+                <a href="#problems" class="category-pill">Farmer Problems</a>
+                <a href="#guides" class="category-pill">Crop Guides</a>
+                <a href="#lowcost" class="category-pill">Low-Cost Solutions</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="insights-grid">
+            <!-- 1 -->
+            <article class="insight-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1560493676-04071c5f467b?auto=format&fit=crop&q=80&w=600" alt="Smart Farming"></div>
+                <div class="card-content">
+                    <span class="card-tag">Smart Irrigation</span>
+                    <h2 class="card-title">Why Most Smart Irrigation Systems Fail in Real Farms</h2>
+                    <p class="card-desc">Theory vs. Reality. Uncovering why high-tech sensors often fail when exposed to real agricultural conditions.</p>
+                    <a href="why-smart-irrigation-fails.html" class="read-more">Read Insight <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- 2 -->
+            <article class="insight-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1592982537447-7440770cbfc9?auto=format&fit=crop&q=80&w=600" alt="Crop Water"></div>
+                <div class="card-content">
+                    <span class="card-tag">Crop Guides</span>
+                    <h2 class="card-title">How to Calculate Exact Water Requirement for Any Crop</h2>
+                    <p class="card-desc">Move beyond guessing. An engineering approach to evapotranspiration and soil water balance.</p>
+                    <a href="calculate-crop-water-requirement.html" class="read-more">Read Insight <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- 3 -->
+            <article class="insight-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&q=80&w=600" alt="Low Cost IoT"></div>
+                <div class="card-content">
+                    <span class="card-tag">Low-Cost Solutions</span>
+                    <h2 class="card-title">Smart Irrigation System Under ₹10,000 – Is It Possible?</h2>
+                    <p class="card-desc">Breaking down the bill of materials for an enterprise-grade irrigation system on a budget.</p>
+                    <a href="low-cost-smart-irrigation-under-10000.html" class="read-more">Read Insight <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- 4 -->
+            <article class="insight-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&q=80&w=600" alt="ESP32 Farming"></div>
+                <div class="card-content">
+                    <span class="card-tag">IoT in Agriculture</span>
+                    <h2 class="card-title">ESP32-Based Smart Farming System: Complete Guide</h2>
+                    <p class="card-desc">Why the ESP32 is the king of ag-tech prototyping and how to deploy it reliably in the field.</p>
+                    <a href="esp32-smart-farming-guide.html" class="read-more">Read Insight <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- 5 -->
+            <article class="insight-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1495107335147-43255513d330?auto=format&fit=crop&q=80&w=600" alt="Farmer Problems"></div>
+                <div class="card-content">
+                    <span class="card-tag">Farmer Problems</span>
+                    <h2 class="card-title">Top 7 Problems Farmers Face with Automation</h2>
+                    <p class="card-desc">Automation isn't just about code; it's about reliability. Identifying the friction points in farm tech adoption.</p>
+                    <a href="top-7-farming-automation-problems.html" class="read-more">Read Insight <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- 6 -->
+            <article class="insight-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1592841608372-520e7e405e6b?auto=format&fit=crop&q=80&w=600" alt="Tomato Farming"></div>
+                <div class="card-content">
+                    <span class="card-tag">Crop Guides</span>
+                    <h2 class="card-title">Tomato Water Requirement Per Acre (Complete Guide)</h2>
+                    <p class="card-desc">Precision irrigation for tomato crops. Optimizing yield through data-driven scheduling.</p>
+                    <a href="tomato-water-requirement-acre-guide.html" class="read-more">Read Insight <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- 7 -->
+            <article class="insight-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1558449028-b53a39d100fc?auto=format&fit=crop&q=80&w=600" alt="Sensors"></div>
+                <div class="card-content">
+                    <span class="card-tag">Smart Irrigation</span>
+                    <h2 class="card-title">Soil Moisture Sensors: Do You Really Need Them?</h2>
+                    <p class="card-desc">Validating the ROI of moisture sensors. When to use them and when to trust weather data instead.</p>
+                    <a href="soil-moisture-sensors-guide.html" class="read-more">Read Insight <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- 8 -->
+            <article class="insight-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1500382017468-9049fed747ef?auto=format&fit=crop&q=80&w=600" alt="Irrigation Types"></div>
+                <div class="card-content">
+                    <span class="card-tag">Low-Cost Solutions</span>
+                    <h2 class="card-title">Drip vs Flood Irrigation: Which Is Better?</h2>
+                    <p class="card-desc">A technical comparison of efficiency, cost, and crop health between traditional and modern methods.</p>
+                    <a href="drip-vs-flood-irrigation.html" class="read-more">Read Insight <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- 9 -->
+            <article class="insight-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1534088568595-a066f7104221?auto=format&fit=crop&q=80&w=600" alt="Weather Data"></div>
+                <div class="card-content">
+                    <span class="card-tag">IoT in Agriculture</span>
+                    <h2 class="card-title">How Weather Data Improves Irrigation Efficiency</h2>
+                    <p class="card-desc">Using API-driven weather forecasts to predict irrigation needs 48 hours in advance.</p>
+                    <a href="weather-data-irrigation-efficiency.html" class="read-more">Read Insight <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+
+            <!-- 10 -->
+            <article class="insight-card">
+                <div class="card-image"><img src="https://images.unsplash.com/photo-1464226184884-fa280b87c399?auto=format&fit=crop&q=80&w=600" alt="Future Farming"></div>
+                <div class="card-content">
+                    <span class="card-tag">IoT in Agriculture</span>
+                    <h2 class="card-title">Future of Farming: Data-Driven Agriculture</h2>
+                    <p class="card-desc">Where agriculture meets Big Data. The next decade of intelligent farming systems.</p>
+                    <a href="future-of-data-driven-agriculture.html" class="read-more">Read Insight <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </article>
+        </div>
+    </main>
+
+    <footer style="background: var(--white); padding: 60px 5%; text-align: center; border-top: 1px solid var(--light);">
+        <p style="color: var(--text-muted); font-size: 0.9rem;">&copy; 2026 Sudeep Mullaguri. Built for Sustainable Agriculture.</p>
+    </footer>
+
+</body>
+</html>

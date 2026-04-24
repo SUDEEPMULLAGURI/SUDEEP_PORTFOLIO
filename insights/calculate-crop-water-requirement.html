@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How to Calculate Exact Water Requirement for Any Crop | Sudeep Mullaguri</title>
+    <meta name="description" content="Stop guessing. Learn the engineering formula for crop water requirements using Evapotranspiration (ETc) and Kc values for precision irrigation.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #0066FF; --dark: #003399; --light: #E6F0FF; --white: #FFFFFF; --text: #1A202C; --text-muted: #4A5568; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.8; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 2rem; }
+        header { padding: 120px 0 60px; text-align: left; border-bottom: 1px solid var(--light); margin-bottom: 3rem; }
+        .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--primary); text-decoration: none; font-weight: 700; font-size: 0.9rem; margin-bottom: 2rem; }
+        h1 { font-size: 3rem; font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -1px; }
+        .meta { display: flex; align-items: center; gap: 20px; color: var(--text-muted); font-size: 0.9rem; }
+        .content { font-size: 1.15rem; color: #2D3748; }
+        .content h2 { font-size: 1.8rem; font-weight: 800; margin: 3rem 0 1rem; color: var(--text); }
+        .formula-box { background: #F7FAFC; padding: 2rem; border-radius: 12px; border: 1px solid var(--light); font-family: 'JetBrains Mono', monospace; margin: 2rem 0; text-align: center; font-size: 1.3rem; color: var(--dark); }
+        .author-box { background: var(--light); padding: 3rem; border-radius: 24px; margin-top: 5rem; display: flex; align-items: center; gap: 2rem; }
+        .author-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; }
+        .cta-section { background: var(--primary); color: var(--white); padding: 4rem; border-radius: 24px; text-align: center; margin: 5rem 0; }
+        .cta-btn { background: var(--white); color: var(--primary); padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-block; }
+        @media (max-width: 768px) { h1 { font-size: 2.2rem; } .author-box { flex-direction: column; text-align: center; } }
+    </style>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      "headline": "How to Calculate Exact Water Requirement for Any Crop",
+      "author": { "@type": "Person", "name": "Sudeep Mullaguri" }
+    }
+    </script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Insights</a>
+            <h1>How to Calculate Exact Water Requirement for Any Crop</h1>
+            <div class="meta"><span><i class="fas fa-calendar"></i> April 24, 2026</span><span><i class="fas fa-tag"></i> Crop Guides</span></div>
+        </header>
+
+        <article class="content">
+            <p><strong>The problem:</strong> Most farmers irrigate based on a schedule (e.g., "every morning for 2 hours"). This either drowns the roots or leaves the plant thirsty. Both lead to yield loss.</p>
+            
+            <h2>The Science of Evapotranspiration</h2>
+            <p>Plants don't just "drink" water; they lose it through their leaves (transpiration) and the soil loses it through heat (evaporation). Combined, this is called <strong>Evapotranspiration (ET)</strong>. To calculate exact water needs, you need to know the Reference ET (ETo) for your area and the Crop Coefficient (Kc).</p>
+            
+            <div class="formula-box">ETc = ETo × Kc</div>
+            
+            <h2>Breaking Down the Formula</h2>
+            <ul>
+                <li><strong>ETo (Reference ET):</strong> How much water a standard grass field would lose today. You get this from weather stations or APIs.</li>
+                <li><strong>Kc (Crop Coefficient):</strong> A value that changes based on the plant type and its growth stage. A seedling uses less water (low Kc) than a fruit-bearing plant (high Kc).</li>
+            </ul>
+
+            <h2>Technical Insight: Soil Moisture Deficit</h2>
+            <p>You shouldn't just replace the ETc every day. Soil has a "holding capacity" like a battery. You only irrigate when the "charge" (moisture level) drops below a certain point. This is called the <strong>Management Allowed Depletion (MAD)</strong>.</p>
+            
+            <p>By combining ETc calculation with MAD logic, we can reduce water consumption by up to 30% while increasing crop quality.</p>
+            
+            <h2>Conclusion</h2>
+            <p>Stop guessing. Start measuring. Using a simple Kc table and a local weather API, you can transform your irrigation from "art" to "engineering."</p>
+        </article>
+
+        <section class="author-box">
+            <img src="../assets/profile.png" alt="Sudeep Mullaguri" class="author-img">
+            <div class="author-info"><h3>About Sudeep Mullaguri</h3><p>IoT Developer focused on bridging the gap between data science and real-world farm fields.</p></div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Calculate Your Farm's Needs</h2>
+            <p>I build custom calculators for massive farms. Need one for yours?</p>
+            <a href="../#contact" class="cta-btn">Let's Build It</a>
+        </section>
+    </div>
+</body>
+</html>

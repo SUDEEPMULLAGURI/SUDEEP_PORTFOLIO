@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Smart Irrigation Under ₹10,000 – Is It Possible? | Sudeep Mullaguri</title>
+    <meta name="description" content="Budget-friendly smart farming. How to build a professional IoT irrigation system for under 10k INR using off-the-shelf components.">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+    <style>
+        :root { --primary: #0066FF; --dark: #003399; --light: #E6F0FF; --white: #FFFFFF; --text: #1A202C; --text-muted: #4A5568; }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; color: var(--text); background: var(--white); line-height: 1.8; }
+        .container { max-width: 800px; margin: 0 auto; padding: 0 2rem; }
+        header { padding: 120px 0 60px; text-align: left; border-bottom: 1px solid var(--light); margin-bottom: 3rem; }
+        .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--primary); text-decoration: none; font-weight: 700; font-size: 0.9rem; margin-bottom: 2rem; }
+        h1 { font-size: 3rem; font-weight: 800; line-height: 1.1; margin-bottom: 1.5rem; letter-spacing: -1px; }
+        .meta { display: flex; align-items: center; gap: 20px; color: var(--text-muted); font-size: 0.9rem; }
+        .content { font-size: 1.15rem; color: #2D3748; }
+        .content h2 { font-size: 1.8rem; font-weight: 800; margin: 3rem 0 1rem; color: var(--text); }
+        .bom-table { width: 100%; border-collapse: collapse; margin: 2rem 0; background: #F7FAFC; border-radius: 8px; overflow: hidden; }
+        .bom-table th, .bom-table td { padding: 1rem; border: 1px solid var(--light); text-align: left; }
+        .bom-table th { background: var(--light); color: var(--dark); }
+        .author-box { background: var(--light); padding: 3rem; border-radius: 24px; margin-top: 5rem; display: flex; align-items: center; gap: 2rem; }
+        .author-img { width: 100px; height: 100px; border-radius: 50%; object-fit: cover; }
+        .cta-section { background: var(--primary); color: var(--white); padding: 4rem; border-radius: 24px; text-align: center; margin: 5rem 0; }
+        .cta-btn { background: var(--white); color: var(--primary); padding: 1rem 2.5rem; border-radius: 50px; text-decoration: none; font-weight: 800; display: inline-block; }
+        @media (max-width: 768px) { h1 { font-size: 2.2rem; } .author-box { flex-direction: column; text-align: center; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="back-link"><i class="fas fa-arrow-left"></i> Back to Insights</a>
+            <h1>Smart Irrigation System Under ₹10,000 – Is It Really Possible?</h1>
+            <div class="meta"><span><i class="fas fa-calendar"></i> April 24, 2026</span><span><i class="fas fa-tag"></i> Low-Cost Solutions</span></div>
+        </header>
+
+        <article class="content">
+            <p><strong>The Challenge:</strong> Most "professional" irrigation controllers cost between ₹40,000 to ₹1,00,000. For a small-scale Indian farmer, this is an impossible investment. But does cheap have to mean low quality?</p>
+            
+            <p>I set out to build a system that matchesindustrial standards for under ₹10,000. Here is how I did it.</p>
+            
+            <h2>The Billion Rupee Bill of Materials (BOM)</h2>
+            <table class="bom-table">
+                <thead><tr><th>Component</th><th>Purpose</th><th>Approx Cost</th></tr></thead>
+                <tbody>
+                    <tr><td>ESP32 Microcontroller</td><td>The Brain (WiFi + Processing)</td><td>₹600</td></tr>
+                    <tr><td>Solenoid Valve (1-inch)</td><td>Controlling Water Flow</td><td>₹1,800</td></tr>
+                    <tr><td>Capacitive Moisture Sensor</td><td>Soil Data (Anti-corrosive)</td><td>₹400</td></tr>
+                    <tr><td>Relay Module (Solid State)</td><td>Switching High Voltage</td><td>₹500</td></tr>
+                    <tr><td>IP67 Enclosure</td><td>Weather Proofing</td><td>₹1,200</td></tr>
+                    <tr><td>Power Supply & Wiring</td><td>System Power</td><td>₹1,500</td></tr>
+                    <tr><td><strong>Total</strong></td><td></td><td><strong>~₹6,000</strong></td></tr>
+                </tbody>
+            </table>
+
+            <h2>Where People Waste Money</h2>
+            <p>Most beginners buy fancy touchscreens. <strong>Don't.</strong> Your phone is the screen. By using a headless ESP32 system and a free dashboard like Blynk or an AWS IoT Free Tier, you save thousands. Also, avoid mechanical relays; they fail in humid environments. Use Solid State Relays (SSRs).</p>
+
+            <h2>Technical Insight: Surge Protection</h2>
+            <p>In rural India, power surges are common. If you don't spend ₹500 on a decent varistor and fuse circuit, your ₹6,000 system will be toast in the first monsoon. Investing in <strong>Optical Isolation</strong> between your ESP32 and the Solenoid is non-negotiable.</p>
+
+            <h2>Conclusion</h2>
+            <p>Yes, it's possible. Not only is it possible, but a custom-built ₹10k system often outperforms a ₹50k "black box" because you can repair it yourself when something goes wrong.</p>
+        </article>
+
+        <section class="author-box">
+            <img src="../assets/profile.png" alt="Sudeep Mullaguri" class="author-img">
+            <div class="author-info"><h3>About Sudeep Mullaguri</h3><p>Embedded systems expert creating affordable tech for the global South.</p></div>
+        </section>
+
+        <section class="cta-section">
+            <h2>Want the Full Schematic?</h2>
+            <p>I release open-source designs for low-cost farming. Check my GitHub or message me for the PCB files.</p>
+            <a href="../#contact" class="cta-btn">Get the Design</a>
+        </section>
+    </div>
+</body>
+</html>
