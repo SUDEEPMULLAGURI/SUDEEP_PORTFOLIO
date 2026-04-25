@@ -1,6 +1,63 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-<url>
-<loc>https://sudeepmullaguri.github.io/SUDEEP_PORTFOLIO/</loc>
-</url>
+  <url>
+    <loc>https://sudeepmullaguri.github.io/SUDEEP_PORTFOLIO/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://sudeepmullaguri.github.io/SUDEEP_PORTFOLIO/insights/</loc>
+    <lastmod>2026-04-25</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://sudeepmullaguri.github.io/SUDEEP_PORTFOLIO/insights/why-smart-irrigation-fails.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sudeepmullaguri.github.io/SUDEEP_PORTFOLIO/insights/calculate-crop-water-requirement.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sudeepmullaguri.github.io/SUDEEP_PORTFOLIO/insights/low-cost-smart-irrigation-under-10000.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sudeepmullaguri.github.io/SUDEEP_PORTFOLIO/insights/esp32-smart-farming-guide.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sudeepmullaguri.github.io/SUDEEP_PORTFOLIO/insights/top-7-farming-automation-problems.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sudeepmullaguri.github.io/SUDEEP_PORTFOLIO/insights/tomato-water-requirement-acre-guide.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sudeepmullaguri.github.io/SUDEEP_PORTFOLIO/insights/soil-moisture-sensors-guide.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sudeepmullaguri.github.io/SUDEEP_PORTFOLIO/insights/drip-vs-flood-irrigation.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sudeepmullaguri.github.io/SUDEEP_PORTFOLIO/insights/weather-data-irrigation-efficiency.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://sudeepmullaguri.github.io/SUDEEP_PORTFOLIO/insights/future-of-data-driven-agriculture.html</loc>
+    <lastmod>2026-04-25</lastmod>
+    <priority>0.8</priority>
+  </url>
 </urlset>
